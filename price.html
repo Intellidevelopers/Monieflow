@@ -15,62 +15,30 @@
         <h4>Choose Budget</h4>
        </div>
 
-       <div class="plan" id="plan1">
-        <div class="inner">
-            <div class="emmer">
-                <i style="background-color: rgba(190, 177, 177, 0.452);padding: 10px;border-radius: 100%;color: blueviolet;" class="fa fa-lock"></i> 
-                <h5 style="margin-top: 10px;">Emergency</h5>
+       <div class="plan-price">
+        <div class="inner-price">
+            <div class="emmer-price">
+                <h5>2000</h5>
             </div>
-            <div class="amount">
-              <h5 style="color: blueviolet;font-weight: 700;margin-top: 10px;">N50,000</h5>
-              <i style="color: blueviolet; margin-top: 10px;" class="fa fa-arrow-right"></i>
-            </div>
-       </div>
        </div>
 
-       <div class="plan" id="plan2">
-        <div class="inner">
-            <div class="emmer">
-                <i style="background-color: rgba(190, 177, 177, 0.452);padding: 10px;border-radius: 100%;color: blueviolet;" class="fa fa-lock"></i> 
-                <h5 style="margin-top: 10px;">Emergency</h5>
+       <div class="inner-price">
+            <div class="emmer-price">
+                <h5>2000</h5>
             </div>
-            <div class="amount">
-              <h5 style="color: blueviolet;font-weight: 700;margin-top: 10px;">N50,000</h5>
-              <i style="color: blueviolet; margin-top: 10px;" class="fa fa-arrow-right"></i>
-            </div>
-       </div>
-       </div>
+        </div>
 
-       <div class="plan" id="plan3">
-        <div class="inner">
-            <div class="emmer">
-                <i style="background-color: rgba(190, 177, 177, 0.452);padding: 10px;border-radius: 100%;color: blueviolet;" class="fa fa-lock"></i> 
-                <h5 style="margin-top: 10px;">Emergency</h5>
-            </div>
-            <div class="amount">
-              <h5 style="color: blueviolet;font-weight: 700;margin-top: 10px;">N50,000</h5>
-              <i style="color: blueviolet; margin-top: 10px;" class="fa fa-arrow-right"></i>
+        <div class="inner-price">
+            <div class="emmer-price">
+                <h5>2000</h5>
             </div>
        </div>
        </div>
+       <input class="input" type="text" placeholder="Enter amount">
 
+       
 
-       <input id="investBtn" class="btn" type="button" value="Invest Now">
-    </div>
+       <input class="btns" type="button" value="Invest Now">
 
-    <script>
-        // Add click event listener to "Invest Now" button
-        document.getElementById("investBtn").addEventListener("click", function() {
-            // Check if any of the Emergency tabs are selected
-            if (document.getElementById("plan1").classList.contains("selected") ||
-                document.getElementById("plan2").classList.contains("selected") ||
-                document.getElementById("plan3").classList.contains("selected")) {
-                // Do nothing, as an Emergency tab is already selected
-            } else {
-                // Select the first Emergency tab by default
-                document.getElementById("plan1").classList.add("selected");
-            }
-        });
-    </script>
 </body>
 </html>

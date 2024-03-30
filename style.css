@@ -70,3 +70,46 @@ body{
 a{
     text-decoration: none;
 }
+h5{
+    color: rgba(5, 5, 5, 0.863);
+}
+.plan-price{
+    display: flex;
+    gap: 20px;
+}
+
+.inner-price{
+    border: 2px solid rgba(51, 48, 48, 0.185);
+    padding: 7px;
+    width: 80px;
+    margin-left: 4px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: rgba(51, 48, 48, 0.100);
+}
+.input{
+    padding: 12px;
+    width: 97%;
+    margin-left: 5px;
+    margin-top: 50px;
+    border: 2px solid rgba(51, 48, 48, 0.185);
+    border-radius: 5px;
+}
+.input::placeholder{
+    color: rgba(51, 48, 48, 0.385);
+}
+.btns{
+    text-decoration: none;
+    background-color: blueviolet;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    align-content: center;
+    width: 95%;
+    margin-top: 10px;
+    position: fixed;
+    top: 85%;
+    margin-left: -287px;
+}
