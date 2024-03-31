@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" manifest="manifest.appcache">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Withdraw funds to your bank account </title> 
+   </head>
+   <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4070f4;
+}
+.wrapper{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  height: 110vh;
+  padding: 34px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #4070f4;
+}
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+form .policy{
+  display: flex;
+  align-items: center;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #5D41D0;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #5D41D0;
+}
+form .text h3{
+ color: #333;
+ width: 100%;
+ text-align: center;
+}
+form .text h3 a{
+  color: limegreen;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+} 
+select{
+    height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+label{
+  font-weight: 500;
+}
+
+.box{
+  border: 2px solid #1598d4;
+  text-align: center;
+  border-radius: 30px;
+  height: 170px;
+  margin: 10px;
+}
+h4, h5 {
+  margin: 8px;
+}
+h4{
+  text-decoration: underline;
+}
+.bg{
+  background-color: lightgray;
+  text-transform: uppercase;
+  font-size: 15px; 
+  height: 50px;
+  border-radius: 3px;
+}
+a{
+  text-decoration: none;
+} 
+span{
+  font-weight: 600;
+  text-decoration: none;
+  color: blue;
+  font-style: bold;
+  
+} 
+   </style>
+<body>
+  <div class="wrapper">
+    <h2>Withdraw to Bank</h2>
+    <form action="pay.html">
+      <div class="input-box">
+        <input type="number" placeholder="Enter your account number" required>
+      </div>
+      <div class="input-box">
+        <input type="name" placeholder="Enter your account name" required>
+      </div>
+      <div class="input-box">
+       <label>Select</label>
+       <br>
+        <select>
+         <option>Please select your bank</option>
+            <option>First Bank</option>
+            <option>Access Bank</option>
+            <option>UBA</option>
+            <option>Zenith Bank</option>
+            <option>Union Bank</option>
+            <option>Keystone Bank</option>
+            <option>Gtbank</option>
+            <option>Fidelity Bank</option>
+            <option>Ecobank</option>
+            <option>Wema Bank</option>
+            <option>FCMB</option>
+            <option>Sterling Bank</option>
+            <option>Polaris Bank</option>
+            <option>Heritage Bank</option>
+            <option>Unity Bank</option>
+            <option>SunTrust Bank</option>
+            <option>Standard Chattered Bank</option>
+            <option>Providus Bank</option>
+            <option>Jaiz Bank</option>
+            <option>Stanbic IBTC Bank</option>
+            <option>Citi Bank</option>
+            <option>Central Bank of Nigeria</option>
+            <option>Opay (Paycom)</option>
+            <option>Kuda</option>
+            <option>Moniepoint</option>
+        </select>
+      </div>
+      <br>
+       <div class="input-box">
+        <input type="number" placeholder="Enter amount" required>
+      </div>
+      <div class="policy">
+        <input type="checkbox">
+        <h3>I accept all terms & condition</h3>
+      </div>
+      <div class="input-box button">
+        <a href="pay.html">
+          <input type="Submit" onclick="payment()" value="Withdraw" required> 
+        </a>
+      </div>
+      <div class="text">
+        <h3>Available balance<a href=""> ₦85,000.31</a></h3>
+      </div>
+    </form>
+  </div>
+</body>
+<script>
+  function errorButton() {
+    // Show the SweetAlert input dialog
+    Swal.fire({
+      title: 'Your Account Number',
+      input: 'text',
+      inputPlaceholder: '12****7890',
+      showCancelButton: true,
+      confirmButtonText: 'Comfirm',
+      showLoaderOnConfirm: true,
+      preConfirm: (searchQuery) => {
+        // You can handle the search query here
+        // For example, perform an AJAX request to search the data based on the user's input3
+        return new Promise((resolve) => {
+          // Simulate the search process with a setTimeout
+          setTimeout(() => {
+            // Replace this with your actual search logic
+           const results = ['Sorry Dear User no any payment Was found from Your bank.'];
+            resolve(results);
+          }, 10000); // Simulating a 2-second search process
+        });
+      },
+      allowOutsideClick: () => !Swal.isLoading(),
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const searchResult = result.value;
+        // You can display or process the search results here
+        Swal.fire({
+          icon: 'error',
+          title: 'Result',
+          html: `${searchResult.map((item) => `${item}`).join('')}`,
+        });
+      }
+    });
+  } 
+</script>
+<script>
+// Register the service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(function(registration) {
+      console.log('Service Worker registered with scope:', registration.scope);
+    })
+    .catch(function(error) {
+      console.error('Service Worker registration failed:', error);
+    });
+}
+
+// Add event listener for the 'install' event
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open('app-cache-v1')
+      .then(function(cache) {
+        return cache.addAll([
+          '/',
+          // Add more files and assets to cache as needed
+        ]);
+      })
+  );
+});
+
+// Add event listener for the 'fetch' event
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Return the cached response if it exists
+        if (response) {
+          return response;
+        }
+
+        // Otherwise, fetch the request from the network
+        return fetch(event.request);
+      })
+  );
+});
+
+function payment(){
+    window.location.href = "details.html"
+}
+</script>
+</html>

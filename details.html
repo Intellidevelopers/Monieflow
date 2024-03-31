@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .text{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body {
+        font-family: Arial, sans-serif;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #5D41D0;
+    }
+
+    th, td {
+        border: 1px solid #5D41D0;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+    .footer{
+        background-color: #5e41d028;
+        color: #5D41D0;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    button{
+        background-color: #5D41D0;
+        padding: 15px;
+        color: white;
+        width: 95%;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20%;
+    }
+    button:hover{
+        opacity: 0.7;
+    }
+    .btn{
+        background-color: white;
+        margin-top: 5%;
+        border: 2px solid #5D41D0;
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="verify.png" alt="">
+            <h2>Pending payment</h2>
+        </header>
+
+        <section>
+            <div class="text">
+                <p>Kindly make a one time payment of ₦5,000 to approve and get paid instantly</p>
+            </div>
+        </section>
+        <br><br><br>
+        <section>
+
+<table>
+  <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Account Name</th>
+      <th>Bank Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>123456789</td>
+      <td>John Doe</td>
+      <td>Example Bank</td>
+    </tr>
+    <tr>
+      <td>987654321</td>
+      <td>Jane Smith</td>
+      <td>Another Bank</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+        </section>
+        <br>
+        <section>
+            <div class="footer">
+                <p>Kindly come back to click the button below <b>"Confirm Payment"</b> after your successful transaction.</p>
+            </div>
+        </section>
+
+        <button>I have made this payment</button>
+        <button onclick="back()" class="btn">Cancel</button>
+    </div>
+    <script>
+        function back(){
+            window.location.href = "dashboard.html"
+        }
+    </script>
+</body>
+</html>

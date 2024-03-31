@@ -15,7 +15,6 @@
         <h4>Choose Budget</h4>
        </div>
 
-       <a href="price.html">
        <div class="plan" id="plan1">
         <div class="inner">
             <div class="emmer">
@@ -28,9 +27,7 @@
             </div>
        </div>
        </div>
-       </a>
 
-       <a href="price.html">
        <div class="plan" id="plan2">
         <div class="inner">
             <div class="emmer">
@@ -43,9 +40,7 @@
             </div>
        </div>
        </div>
-       </a>
-    
-       <a href="price.html">
+
        <div class="plan" id="plan3">
         <div class="inner">
             <div class="emmer">
@@ -58,10 +53,9 @@
             </div>
        </div>
        </div>
-       </a>
 
 
-       <input id="investBtn" class="btn" type="button" value="Invest Now">
+       <input id="investBtn" class="btn" type="button" onclick="next()" value="Invest Now">
     </div>
 
     <script>
@@ -77,6 +71,11 @@
                 document.getElementById("plan1").classList.add("selected");
             }
         });
+
+function next(){
+    window.location.href = "dashboard.html";
+}
+        
     </script>
 </body>
 </html>
