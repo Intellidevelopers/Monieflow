@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/sweetalert2.min.css">
     <style>
         header{
             text-align: center;
@@ -117,7 +118,7 @@
             </div>
         </section>
 
-        <button>I have made this payment</button>
+        <button type="submit" onclick="showAlert()">I have made this payment</button>
         <button onclick="back()" class="btn">Cancel</button>
     </div>
     <script>
@@ -125,5 +126,17 @@
             window.location.href = "dashboard.html"
         }
     </script>
+    <script>
+        function  showAlert(){
+    swal("Enter your payment ID:", {
+        content: "input",
+      })
+      .then((value) => {
+        swal(`Your payment for: ${value} is not successful`);
+      });
+}
+
+    </script>
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>
